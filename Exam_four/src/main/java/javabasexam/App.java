@@ -36,13 +36,38 @@ public class App {
 			map.put(a,li);
 		}
 		System.out.println();
-		System.out.print("Map中的数据为：{");
+		System.out.print("Map中的数据为：");
 
 		for (Object o : map.keySet()) {
-			System.out.print( o + "=>" + map.get(o)+",");
+			System.out.print(map);
 		}
-
-
+		System.out.println("}");
+		System.out.print("排序后的 Map 为 :");
+		for (int i = 0; i < map.size(); i++) {
+			list =sort(map.get(i));
+			map.put(i, list);
+			
+		}
+		for (Object o : map.keySet()) {
+			System.out.print(map);
+		}
+		 
+		
+	}
+	public static List<Integer> sort(List<Integer> list){
+		List<Integer> li = new ArrayList<Integer>();
+        for (int i = 0; i < list.size() - 1; i++) {  
+            for (int j = 1; j < list.size() - i; j++) {  
+                Integer a;  
+                if ((list.get(j - 1)).compareTo(list.get(j)) > 0) { // 比较两个整数的大小  
+  
+                    a = list.get(j - 1);  
+                    list.set((j - 1), list.get(j));  
+                    list.set(j, a);  
+                }  
+            }  
+        }
+		return list;
 	}
 }
 
