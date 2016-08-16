@@ -10,7 +10,7 @@ import java.util.Map;
  * 再将 Map 中 key 对应的数组进行排序,得到如{1=>[10,11,12],2=>[21,23,24]}
  * 输出的形式如下:
  * 		随机生成 50 个小于 100 的数 , 分别为 : xxx,xxxx,xxxx
- * 		Map 中的数据为 : {1=>[11,10,12],2=>[21,24,23]}
+ * 		Map 中的数据为 : {1=>w[11,10,12],2=>[21,24,23]}
  * 		排序后的 Map 为 : {1=>[10,11,12],2=>[21,23,24]}
  */
 public class App {
@@ -37,20 +37,17 @@ public class App {
 		}
 		System.out.println();
 		System.out.print("Map中的数据为：");
+		System.out.println(map);
 
-		for (Object o : map.keySet()) {
-			System.out.print(map);
-		}
-		System.out.println("}");
 		System.out.print("排序后的 Map 为 :");
 		for (int i = 0; i < map.size(); i++) {
 			list =sort(map.get(i));
 			map.put(i, list);
 			
 		}
-		for (Object o : map.keySet()) {
+//		for (Object o : map.keySet()) {
 			System.out.print(map);
-		}
+//		}
 		 
 		
 	}
