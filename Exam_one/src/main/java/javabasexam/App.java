@@ -26,7 +26,10 @@ public class App {
 					break;
 				}
 			}
-			if(b){b=false;continue;}
+			if(b){
+				b=false;
+				continue;
+				}
 			list.add(i);
 		}
 		

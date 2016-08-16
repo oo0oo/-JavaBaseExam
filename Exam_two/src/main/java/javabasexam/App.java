@@ -12,7 +12,7 @@ public class App {
 	public static void main(String[] args) {
 		
 		double tax = 0;
-		System.out.println("请输入工资 : ");
+		System.out.print("请输入工资 : ");
 		Scanner scanner = new Scanner(System.in);
 		int salary = scanner.nextInt();
 		int over_sal = salary-3500;
